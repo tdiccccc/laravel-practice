@@ -18,3 +18,6 @@ Route::get('/', function () {
 });
 
 Route::get('/sample', [App\Http\Controllers\Sample\IndexController::Class,'show']);
+Route::get('/sample/{id}', [App\Http\Controllers\Sample\IndexController::Class,'showId']);
+
+Route::get('/tweet', \App\Http\Controllers\Tweet\IndexController::class);

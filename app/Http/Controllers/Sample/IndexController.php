@@ -11,4 +11,9 @@ class IndexController extends Controller
     {
         return 'Hello';
     }
+
+    public function showId($id)
+    {
+        return "Hello {$id}";
+    }
 }
