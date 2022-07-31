@@ -22,9 +22,9 @@
       @enderror
       <button type="submit">投稿</button>
     </form>
-    <!-- @foreach($tweets as $tweet)
+    @foreach($tweets as $tweet)
       <p>{{ $tweet->content }}</p>
-    @endforeach -->
+    @endforeach
   </div>
 </body>
 </html>
