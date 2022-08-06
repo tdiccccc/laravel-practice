@@ -17,9 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Sample
 Route::get('/sample', [App\Http\Controllers\Sample\IndexController::Class,'show']);
 Route::get('/sample/{id}', [App\Http\Controllers\Sample\IndexController::Class,'showId']);
 
+
+//Tweet
 Route::get('/tweet', \App\Http\Controllers\Tweet\IndexController::class)
 ->name('tweet.index');
 
@@ -36,3 +39,9 @@ Route::put('/tweet/update/{tweetId}', \App\Http\Controllers\Tweet\Update\PutCont
 //chapter2(04)------
 Route::delete('/tweet/delete/{tweetId}', \App\Http\Controllers\Tweet\DeleteController::class)
 ->name('tweet.delete');
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
