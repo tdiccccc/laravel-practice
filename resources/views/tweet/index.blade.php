@@ -23,7 +23,13 @@
       <button type="submit">投稿</button>
     </form>
     @foreach($tweets as $tweet)
-      <p>{{ $tweet->content }}</p>
+      <details>
+        <summary>{{ $tweet->content }}</summary>
+        <div>
+            <a href="{{ route('tweet.update.index', ['tweetId' => $tweet->id])}}">編集</a>
+        </div>
+      </details>
+      <!-- <p>{{ $tweet->content }}</p> -->
     @endforeach
   </div>
 </body>
