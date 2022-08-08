@@ -9,6 +9,10 @@ class Tweet extends Model
 {
     use HasFactory;
 
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
     //protected $table ='tweet';
     //主キーの名前がtweet_idだった場合
     //protected $table ='tweet_id';
